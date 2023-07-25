@@ -1,5 +1,4 @@
-﻿using QlabDesktop.AtTest;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QlabDesktop
+namespace QlabDesktop.AtTest
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// QuestionPanel.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class QuestionPanel : UserControl
     {
-        public MainWindow()
+        public QuestionPanel()
         {
             InitializeComponent();
         }

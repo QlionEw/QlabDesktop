@@ -13,5 +13,12 @@ namespace QlabDesktop
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.DataContext = new MainWindowVM();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
+        }
     }
 }

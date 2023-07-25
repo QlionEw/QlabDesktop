@@ -1,5 +1,4 @@
-﻿using QlabDesktop.AtTest;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,16 +13,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QlabDesktop
+namespace QlabDesktop.AtTest
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// AtTestPanel.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AtTestPanel : UserControl
     {
-        public MainWindow()
+        public AtTestPanel()
         {
             InitializeComponent();
+        }
+
+        private void TabControl_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                questionTab.SelectedIndex--;
+            }
+            else
+            {
+                questionTab.SelectedIndex++;
+            }
         }
     }
 }

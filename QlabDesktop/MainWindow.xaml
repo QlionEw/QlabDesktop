@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QlabDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:atTest="clr-namespace:QlabDesktop.AtTest"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        Title="MainWindow" Height="650" Width="1024">
+    <TabControl>
+        <TabItem Header="AtTest">
+            <atTest:AtTestPanel DataContext="{Binding AtTest}"/>
+        </TabItem>
+        <TabItem Header="Option">
 
-    </Grid>
+        </TabItem>
+    </TabControl>
 </Window>
